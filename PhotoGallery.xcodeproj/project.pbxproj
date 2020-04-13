@@ -10,6 +10,10 @@
 		0E9401042EDC19160EDDD68D /* Pods_PhotoGalleryTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A14590169B055E3923B12DC3 /* Pods_PhotoGalleryTests.framework */; };
 		150BBEF74CE7E31C8712A3A5 /* Pods_PhotoGallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B9A345954C94CEA15DA1E8 /* Pods_PhotoGallery.framework */; };
 		58F1FD29F317BD8900B6924C /* Pods_PhotoGallery_PhotoGalleryUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062659A4BF22B66FF1D20154 /* Pods_PhotoGallery_PhotoGalleryUITests.framework */; };
+		B93D11532444B3E600587A9C /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D11522444B3E600587A9C /* Reachability.swift */; };
+		B93D11552444B41400587A9C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D11542444B41400587A9C /* Post.swift */; };
+		B93D11592444B5D000587A9C /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D11582444B5D000587A9C /* DatabaseHelper.swift */; };
+		B93D115B2444B5F200587A9C /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93D115A2444B5F200587A9C /* GalleryViewModel.swift */; };
 		B98382822444A5CA006B6557 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98382812444A5CA006B6557 /* AppDelegate.swift */; };
 		B98382842444A5CA006B6557 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98382832444A5CA006B6557 /* ViewController.swift */; };
 		B98382872444A5CA006B6557 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B98382852444A5CA006B6557 /* Main.storyboard */; };
@@ -47,6 +51,10 @@
 		75B9A345954C94CEA15DA1E8 /* Pods_PhotoGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77944139D54C9B0C20E208D4 /* Pods-PhotoGalleryTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoGalleryTests.release.xcconfig"; path = "Target Support Files/Pods-PhotoGalleryTests/Pods-PhotoGalleryTests.release.xcconfig"; sourceTree = "<group>"; };
 		A14590169B055E3923B12DC3 /* Pods_PhotoGalleryTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoGalleryTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B93D11522444B3E600587A9C /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B93D11542444B41400587A9C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B93D11582444B5D000587A9C /* DatabaseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
+		B93D115A2444B5F200587A9C /* GalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		B983827E2444A5CA006B6557 /* PhotoGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B98382812444A5CA006B6557 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B98382832444A5CA006B6557 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +156,10 @@
 				B98382812444A5CA006B6557 /* AppDelegate.swift */,
 				B98382832444A5CA006B6557 /* ViewController.swift */,
 				B98382B42444AFDA006B6557 /* DisplayItems.swift */,
+				B93D11542444B41400587A9C /* Post.swift */,
+				B93D11522444B3E600587A9C /* Reachability.swift */,
+				B93D11582444B5D000587A9C /* DatabaseHelper.swift */,
+				B93D115A2444B5F200587A9C /* GalleryViewModel.swift */,
 				B98382852444A5CA006B6557 /* Main.storyboard */,
 				B983828B2444A5CC006B6557 /* Assets.xcassets */,
 				B983828D2444A5CC006B6557 /* LaunchScreen.storyboard */,
@@ -419,8 +431,12 @@
 			files = (
 				B98382B72444B05E006B6557 /* DisplayCell.swift in Sources */,
 				B983828A2444A5CA006B6557 /* PhotoGallery.xcdatamodeld in Sources */,
+				B93D11532444B3E600587A9C /* Reachability.swift in Sources */,
 				B98382B52444AFDA006B6557 /* DisplayItems.swift in Sources */,
+				B93D11592444B5D000587A9C /* DatabaseHelper.swift in Sources */,
 				B98382842444A5CA006B6557 /* ViewController.swift in Sources */,
+				B93D11552444B41400587A9C /* Post.swift in Sources */,
+				B93D115B2444B5F200587A9C /* GalleryViewModel.swift in Sources */,
 				B98382822444A5CA006B6557 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -603,7 +619,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test.PhotoGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.satyadip.test.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -621,7 +637,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ibm.test.PhotoGallery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.satyadip.test.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -1,6 +1,6 @@
-//
+
 //  DisplayItems.swift
-//  PhotoGallery
+//  SparkNetworkAssignment
 //
 //  Created by Satyadip Singha on 13/04/2020.
 //  Copyright © 2020 Satyadip Singha. All rights reserved.
@@ -9,37 +9,36 @@
 import UIKit
 
 class DisplayItems: UIViewController {
+    
+    var viewModel: GalleryViewModel!
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var lblMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        lblMessage.isHidden = viewModel.arrImagesInLocal.count > 0 ?  true: false
+        super.viewWillAppear(true)
     }
-    */
-
 }
 
-extension DisplayItems: UICollectionViewDataSource {
+extension DisplayItems: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return viewModel.arrImagesInLocal.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as?  DisplayCell {
-            
-            //return cell
+            if viewModel.arrImagesInLocal.count > indexPath.row {
+                cell.bindCellData(data: viewModel.arrImagesInLocal[indexPath.row])
+            }
+            return cell
         }
         return UICollectionViewCell()
     }
 }
+
