@@ -154,19 +154,18 @@
 			isa = PBXGroup;
 			children = (
 				B98382812444A5CA006B6557 /* AppDelegate.swift */,
-				B98382832444A5CA006B6557 /* ViewController.swift */,
-				B98382B42444AFDA006B6557 /* DisplayItems.swift */,
 				B93D11542444B41400587A9C /* Post.swift */,
-				B93D11522444B3E600587A9C /* Reachability.swift */,
-				B93D11582444B5D000587A9C /* DatabaseHelper.swift */,
-				B93D115A2444B5F200587A9C /* GalleryViewModel.swift */,
+				B9A68F5E2445AF1700585C19 /* Viewcontrollers */,
+				B9A68F622445AFFF00585C19 /* CustomCell */,
+				B9A68F602445AF5E00585C19 /* Reachability */,
+				B9A68F5F2445AF4700585C19 /* ViewModel */,
+				B9A68F612445AF8000585C19 /* Database */,
 				B98382852444A5CA006B6557 /* Main.storyboard */,
 				B983828B2444A5CC006B6557 /* Assets.xcassets */,
 				B983828D2444A5CC006B6557 /* LaunchScreen.storyboard */,
 				B98382902444A5CC006B6557 /* Info.plist */,
 				B98382B22444A9D0006B6557 /* GoogleService-Info.plist */,
 				B98382882444A5CA006B6557 /* PhotoGallery.xcdatamodeld */,
-				B98382B62444B05E006B6557 /* DisplayCell.swift */,
 			);
 			path = PhotoGallery;
 			sourceTree = "<group>";
@@ -187,6 +186,47 @@
 				B98382A62444A5CC006B6557 /* Info.plist */,
 			);
 			path = PhotoGalleryUITests;
+			sourceTree = "<group>";
+		};
+		B9A68F5E2445AF1700585C19 /* Viewcontrollers */ = {
+			isa = PBXGroup;
+			children = (
+				B98382832444A5CA006B6557 /* ViewController.swift */,
+				B98382B42444AFDA006B6557 /* DisplayItems.swift */,
+			);
+			path = Viewcontrollers;
+			sourceTree = "<group>";
+		};
+		B9A68F5F2445AF4700585C19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B93D115A2444B5F200587A9C /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B9A68F602445AF5E00585C19 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				B93D11522444B3E600587A9C /* Reachability.swift */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		B9A68F612445AF8000585C19 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B93D11582444B5D000587A9C /* DatabaseHelper.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		B9A68F622445AFFF00585C19 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				B98382B62444B05E006B6557 /* DisplayCell.swift */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

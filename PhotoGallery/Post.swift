@@ -26,7 +26,7 @@ class Post {
               let ref = Storage.storage().reference().child("pictures/\(imageName).jpg")
               let meta = StorageMetadata()
               meta.contentType = "image/jpeg"
-        ref.putData( imgData(0.5)!, metadata: meta) { (metaData, error) in
+            ref.putData( imgData(0.5)!, metadata: meta) { (metaData, error) in
             if let e = error {
                 print("==> error: \(e.localizedDescription)")
                 completion(false)
