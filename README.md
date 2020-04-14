@@ -23,6 +23,8 @@ pod 'CropViewController', '2.4.0'
 
 in terminal write - pod install 
 
+After pod succfully installation open project from workspace and test in iOS 13+ devices. 
+
 ## Requirements
 
 - iOS 13.0+
